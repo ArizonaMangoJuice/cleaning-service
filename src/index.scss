@@ -24,6 +24,11 @@ code {
     monospace;
 }
 
+.link-decoration{
+  color: $raisinBlack;
+  text-decoration: none;
+}
+
 .flex-center{
   display: flex;
   align-items: center;
@@ -69,7 +74,7 @@ code {
 
 header{
   @extend .header-info;
-  height: 50px;
+  height: 80px;
 
   .logo{
     @extend .contacts;
@@ -90,7 +95,7 @@ header{
     border: 3px solid blue;
     position: absolute;
     width: fit-content;
-    top: 50px;
+    top: 80px;
     padding: 50px;
     height: 0px;
     right: 0px;
@@ -118,12 +123,26 @@ header{
   .header-links-container{
     @extend .upper-case;
     @extend .flex-center;
-    height: 50px;
+    height: 80px;
     margin: 0 20px;
     font-size: calc(100vw /150 * 2.1);
     position: relative;
 
     &:hover{
+      .shop{
+        animation: fadeIn .5s;
+        animation-fill-mode: forwards; 
+        height: fit-content;
+        transition: 0.2s;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+
+    &:focus{
       .shop{
         animation: fadeIn .5s;
         animation-fill-mode: forwards; 
