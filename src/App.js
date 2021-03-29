@@ -9,7 +9,9 @@ function App() {
     <div className='app'>
       <HeaderInfo />
       <Header />
-      <Jumbotron />
+      <div className='max-width'>
+        <Jumbotron />
+      </div>
     </div>
   );
 }

@@ -24,6 +24,11 @@ code {
     monospace;
 }
 
+.max-width{
+  max-width: 1400px;
+  margin: auto;
+}
+
 .link-decoration{
   color: $raisinBlack;
   text-decoration: none;
@@ -50,7 +55,8 @@ code {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
   height: 40px;
-  font-size: calc(100vw /150 * 1.8);
+  // font-size: calc(100vw /150 * 1.8);
+  font-size: 15px;
   border-bottom: 1px solid $blueYonderAlpha;
 
   & a{
@@ -125,7 +131,7 @@ header{
     @extend .flex-center;
     height: 80px;
     margin: 0 20px;
-    font-size: calc(100vw /150 * 2.1);
+    // font-size: calc(100vw /150 * 1.8);
     position: relative;
 
     &:hover{
@@ -204,7 +210,7 @@ header{
     padding: 5px 15px;
     overflow: hidden;
     color: $linen;
-    animation: contentMove 7.5s infinite;
+    animation: contentMove 7.8s infinite;
   }
 
   .content-info{
@@ -233,15 +239,15 @@ header{
 
 @keyframes contentMove{
   0%{left:-420px;}
-  10%{left:20px;}
-  15%{left:0px;}
-  30%{left:0px;}
+  10%{left:-420px;}
+  15%{left:-420px;}
+  30%{left:20px;}
   40%{left:0px;}
   50%{left:0px;}
   60%{left:0px;}
   70%{left:0;}
-  80%{left:-420px;}
-  90%{left:-420px;}
+  80%{left:0px;}
+  90%{left:0px;}
   100%{left:-420px;}
 }
 
