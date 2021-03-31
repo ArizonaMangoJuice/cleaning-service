@@ -6,6 +6,7 @@ import Jumbotron from './components/Jumbotron/Jumbotron';
 import Reason from './components/Reasons/Reasons';
 import GetQuote from './components/GetQuote/GetQuote';
 import Services from './components/Services/Services';
+import Packages from './components/Packages/Packages';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <GetQuote />
         <Services />
       </div>
+      <Packages/>
       <Header />
     </div>
   );
