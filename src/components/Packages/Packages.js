@@ -16,6 +16,7 @@ Donec nec justo eget felis facilisis fermentum</p>
                         desc={'Extra charges are based on extra work taken.'}
                     />
                     <PackagesCard
+                        isDefault={true}
                         title={'ON DEMAND'}
                         price={'125'}
                         terms={'No. Of Visits'}
