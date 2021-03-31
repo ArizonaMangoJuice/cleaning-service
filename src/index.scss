@@ -82,6 +82,10 @@ code {
 header{
   @extend .header-info;
   height: 80px;
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+  background-color: $linen;
 
   .logo{
     @extend .contacts;
@@ -294,6 +298,107 @@ header{
 
 .reason-green-text{
   color: $slimyGreen;
+}
+
+//getQuote
+
+.get-quote-container{
+  text-align: center;
+  $getQuoteSpacing: 1.8px;
+
+  .get-quote-paragraph{
+    font-size: 18px;
+  }
+
+  .get-quote-title{
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: $getQuoteSpacing;
+  }
+
+  button{
+    color: $blueYonder;
+    background-color: transparent;
+    font-size: 22px;
+    letter-spacing: $getQuoteSpacing;
+    padding: 30px 50px;
+    border: 2px solid $blueYonderAlpha;
+    border-radius: 5px;
+    position: relative;
+    top: 123px;
+    background: $linen;
+  }
+}
+
+//Services
+.services{
+  margin-top: 80px;
+  @extend .flex-center;
+  align-items: flex-start;
+  height: fit-content;
+  margin-bottom: 50px;
+  padding: 25px;
+  padding-top: 80px;
+  border-top: 1px solid $blueYonderAlpha;
+
+  .title-and-services{
+    width: 50%;
+  }
+
+  .services-title{
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  .services-list-container{
+    padding: 0;
+  }
+
+  .services-list{
+    width: 300px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    list-style: none;
+    font-size: 18px;
+    margin: 5px;
+    padding: 10px;
+    padding-left: 0;
+    border-bottom: 2px dashed $blueYonder;
+  }
+
+  .services-list-image{
+    margin-right: 5px;
+  }
+
+  .services-image-container{
+    border: 3px solid $blueYonder;
+    position: relative;
+    border-radius: 50%;
+    height: 100%;
+    width: fit-content + calc(5px);
+    margin-left: 25px;
+  }
+
+  .services-image-transition-container{
+    @extend .flex-center;
+    // border-radius: 50%;
+    overflow: hidden;    
+    width: 100%;
+    height: 100%;
+  }
+
+  .services-main-image{
+    padding: 15px;
+    // border: $border;
+    object-fit: cover;
+    height: 450px;
+    border-radius:50%;
+    width: 450px;
+    // border-radius: 50%;
+  }
+
+
 }
 
 @keyframes contentMove{
