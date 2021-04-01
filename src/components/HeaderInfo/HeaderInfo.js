@@ -4,11 +4,11 @@ export default function HeaderInfo() {
     return (
         <div className='header-info'>
             <div className='contacts'>
-                <a>720-555-5555</a>
-                <a>suppor@gmail.com</a>
+                <a href='google.com'>720-555-5555</a>
+                <a href='google.com'>suppor@gmail.com</a>
             </div>
             <div className='questions'>
-                <a>Have Questions?</a>
+                <a href='google.com'>Have Questions?</a>
             </div>
         </div>
     )

@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default () => {
+export const QuoteForm = () => {
     return (
         <section className='quote-form-container'>
             <section className='max-width inner-quote-container'>
                 <section className='quote-form-image-section'>
-                    <img className='quote-form-image-section-img' src='https://cdn.pixabay.com/photo/2016/09/01/15/19/industrial-1636397_960_720.jpg' />
+                    <img alt='woman is smiling and cleaning' className='quote-form-image-section-img' src='https://cdn.pixabay.com/photo/2016/09/01/15/19/industrial-1636397_960_720.jpg' />
                 </section>
                 <form>
                     <section>
@@ -19,3 +19,5 @@ export default () => {
         </section>
     )
 }
+
+export default QuoteForm;

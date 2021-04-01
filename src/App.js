@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.scss';
 import HeaderInfo from './components/HeaderInfo/HeaderInfo';
 import Header from './components/Header/Header';
@@ -9,6 +8,7 @@ import Services from './components/Services/Services';
 import Packages from './components/Packages/Packages';
 import Promo from './components/Promo/Promo';
 import QuoteForm from './components/QuoteForm/QuoteForm';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
       </div>
       <Packages/>
       <QuoteForm />
-      <Header />
+      <Footer />
     </div>
   );
 }

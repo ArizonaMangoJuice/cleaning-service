@@ -97,8 +97,8 @@ header{
     grid-column-start: 6;
     grid-column-end: 12;
 
-    &:hover .hello{
-      opacity: 1;
+    a {
+      font-size: 15px;
     }
     
   }
@@ -315,6 +315,30 @@ header{
     font-weight: 400;
     font-size: 32px;
     letter-spacing: $getQuoteSpacing;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    padding-bottom: 15px;
+  // move this to own class
+    &::before{
+      content: '';
+      background-color: $blueYonderAlpha;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 3px;
+    }
+
+    &::after{
+      content: '';
+      background-color: $lightCora;
+      position: absolute;
+      bottom: 0;
+      right: 42.5%;
+      height: 3px;
+      width: 15%;
+    }
   }
 
   button{
@@ -548,7 +572,7 @@ header{
   background-color: $raisinBlack;
   color: $linen;
   padding: 3px;
-  z-index: 99;
+  z-index: 98;
   text-align: center;
 
   a{
@@ -636,13 +660,36 @@ header{
   }
 }
 
+footer{
+    @extend .header-info;
+    height: 80px;
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+    background-color: $linen;
+  
+    .logo{
+      @extend .contacts;
+    }
+  
+    .footer-nav{
+      @extend .flex-center;
+      grid-column-start: 6;
+      grid-column-end: 12;
+  
+      a{
+        font-size: 15px;
+      }
+    }
+}
+
+
 @keyframes buttonPress {
   from {
     box-shadow: 5px 5px 0px 0 $lightCora;
   }
   to{
     box-shadow: 0 0 0 0 transparent;
-
   }
 }
 
