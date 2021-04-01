@@ -7,6 +7,7 @@ import Reason from './components/Reasons/Reasons';
 import GetQuote from './components/GetQuote/GetQuote';
 import Services from './components/Services/Services';
 import Packages from './components/Packages/Packages';
+import Promo from './components/Promo/Promo';
 
 function App() {
   return (
@@ -20,6 +21,12 @@ function App() {
         <Services />
       </div>
       <Packages/>
+      <Promo />
+      <Packages/>
+      <Packages/>
+      <Packages/>
+      <Packages/>
+
       <Header />
     </div>
   );

@@ -431,7 +431,6 @@ header{
       bottom: 0;
       right: 42.5%;
       height: 3px;
-      z-index: 99;
       width: 15%;
     }
   }
@@ -540,6 +539,30 @@ header{
     color: $linen;
     border: none;
   }
+}
+
+.sticky-promo{
+  position: sticky;
+  transition: .5s;
+  top: 80px;
+  background-color: $raisinBlack;
+  color: $linen;
+  padding: 3px;
+  z-index: 99;
+  text-align: center;
+
+  a{
+    padding-left: 15px;
+    color: white;
+    transition: .2s;
+    
+    &:hover{
+      transition: .2s;
+      text-decoration: none;
+    }
+  }
+
+
 }
 
 @keyframes contentMove{
