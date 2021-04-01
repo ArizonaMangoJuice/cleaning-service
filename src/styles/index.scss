@@ -1,0 +1,93 @@
+@use './variables' as *;
+@use './body' as *;
+@use './header' as *;
+@use './slideshow' as *;
+@use './reasons' as *;
+@use './getquote' as *;
+@use './services' as *;
+@use './packages' as *;
+@use './promo' as *;
+@use './quoteform' as *;
+@use './footer' as *;
+//header 
+// slideshow
+// reasons
+//getQuote
+//Services
+// packages
+//promo
+//quote-form
+//footer
+
+
+
+
+
+
+
+
+@keyframes buttonPress {
+  from {
+    box-shadow: 5px 5px 0px 0 $lightCora;
+  }
+  to{
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@keyframes contentMove{
+  0%{left:-420px;}
+  10%{left:-420px;}
+  15%{left:-420px;}
+  30%{left:20px;}
+  40%{left:0px;}
+  50%{left:0px;}
+  60%{left:0px;}
+  70%{left:0;}
+  80%{left:0px;}
+  90%{left:0px;}
+  100%{left:-420px;}
+}
+
+@keyframes slideShow{
+  0%,100%{
+    margin-top: 0;
+  }
+
+  21%{
+    margin-top: 0;
+  }
+
+  25%{
+    margin-top: -601px;
+  }
+
+  46%{
+    margin-top: -601px;
+  }
+
+  50%{
+    margin-top: -1201px;
+  }
+
+  71%{
+    margin-top: -1201px;
+  }
+
+  75%{
+    margin-top: -1801px;
+  }
+
+  96%{
+    margin-top: -1801px;
+  }
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

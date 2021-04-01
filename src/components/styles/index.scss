@@ -1,14 +1,6 @@
-$raisinBlack: #231F20;
-$linen: #F8F5F1;
-$mediumChampagne: #F3DFA2;
-$lightCora: #FF686B;
-$blueYonder: #587792;
-$slimyGreen: #379634;
-$blueYonderAlpha: rgba(88, 119, 146, .2);
-$darkLinen: rgba(173, 171, 168, .2);
-// 
-$border: 1px solid red;
+@use 'variables';
 
+// 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

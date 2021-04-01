@@ -1,0 +1,26 @@
+@use './variables' as *;
+@use './body' as *;
+@use './header' as *;
+
+footer{
+    // @extend .header-info;
+    height: 80px;
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+    background-color: $linen;
+  
+    .logo{
+      @extend .contacts;
+    }
+  
+    .footer-nav{
+      @include flex-center;
+      grid-column-start: 6;
+      grid-column-end: 12;
+  
+      a{
+        font-size: 15px;
+      }
+    }
+}
