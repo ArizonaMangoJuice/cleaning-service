@@ -5,8 +5,10 @@ export default function Packages() {
     return (
         <section className='packages'>
             <h2 className='packages-title'>Our Packages</h2>
-            <p className='packages-desc'>Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
-Donec nec justo eget felis facilisis fermentum</p>
+            <p className='packages-desc'>
+                Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. <br />
+                Donec nec justo eget felis facilisis fermentum
+            </p>
             <section className='packages-cards-container'>
                 <section className='max-width packages-cards-max-width-container'>
                     <PackagesCard

@@ -411,28 +411,42 @@ header{
     position: relative;
     width: fit-content;
     margin: auto;
-    padding: 25px;
+    padding: 25px 0px 15px 0;
+    margin-bottom: 25px;
 
     &::before{
       content: '';
-      background-color: red;
+      background-color: $blueYonderAlpha;
       position: absolute;
       bottom: 0;
       right: 0;
       width: 100%;
-      height: 1px;
+      height: 3px;
+    }
+
+    &::after{
+      content: '';
+      background-color: $lightCora;
+      position: absolute;
+      bottom: 0;
+      right: 42.5%;
+      height: 3px;
+      z-index: 99;
+      width: 15%;
     }
   }
 
-  
+  .packages-desc{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
 }
 
 .packages-cards-container{
   // border: $border;
   min-height: 450px; 
   margin-top: 50px;
-  
-  
 
   .packages-cards-max-width-container{
     @extend .flex-center;
@@ -501,6 +515,7 @@ header{
   .package-card-desc{
     padding: 0 35px;
   }
+
   .package-card-button{
     border: 1px solid $blueYonder;
     width: 50%;
