@@ -8,6 +8,7 @@ import Packages from './components/Packages/Packages';
 import Promo from './components/Promo/Promo';
 import QuoteForm from './components/QuoteForm/QuoteForm';
 import Footer from './components/Footer/Footer';
+import Calculator from './components/Calculator/Calculator';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Reason />
         <GetQuote />
         <Services />
+        <Calculator />
       </div>
       <Packages/>
       <QuoteForm />
