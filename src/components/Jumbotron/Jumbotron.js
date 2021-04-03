@@ -1,4 +1,8 @@
 import React from 'react';
+import firstSlide from '../../images/firstSlide.jpg';
+import secondSlide from '../../images/secondSlide.jpg';
+import thirdSlide from '../../images/thirdSlide.jpg';
+import fourthSlide from '../../images/fourthSlide.jpg';
 
 export default function Jumbotron() {
     return (
@@ -8,34 +12,34 @@ export default function Jumbotron() {
                 <div className='slideshow-image-container'>
                     <div className='content-background'></div>
                     <div className='slideshow-content'>
-                        <h1 className='content-title'>TITLE</h1>
-                        <p className='content-info'>djsakldjska ldjsak ldasj kdlasjd klsdajk ldsaj kl</p>
+                        <h1 className='content-title'>Cleanliness Is Art</h1>
+                        <p className='content-info'>We Pride ourselves in our work. We are one of the best and most consistent cleaners in Colorado.</p>
                     </div>
-                    <img alt='People are cleaning and smelling' className='slideshow-image test' src='https://images.unsplash.com/photo-1593642634443-44adaa06623a?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1225&q=80' />
+                    <img alt='People are cleaning and smelling' className='slideshow-image test' src={firstSlide} />
                 </div>
                 <div className='slideshow-image-container'>
                     <div className='content-background'></div>
                     <div className='slideshow-content'>
-                        <h1 className='content-title'>TITLE</h1>
-                        <p className='content-info'>djsakldjska ldjsak ldasj kdlasjd klsdajk ldsaj kl</p>
+                        <h1 className='content-title'>Had A Crazy Party?</h1>
+                        <p className='content-info'>Give us a call and we will fix you right up. Plus, the next time you have another awesome party it will be cheaper!</p>
                     </div>
-                    <img alt='People are cleaning and smelling' className='slideshow-image' src='https://images.unsplash.com/photo-1612832164313-ac0d7e07b5ce?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80' />
+                    <img alt='People are cleaning and smelling' className='slideshow-image' src={secondSlide} />
                 </div>
                 <div className='slideshow-image-container'>
                     <div className='content-background'></div>
                     <div className='slideshow-content'>
-                        <h1 className='content-title'>TITLE</h1>
-                        <p className='content-info'>djsakldjska ldjsak ldasj kdlasjd klsdajk ldsaj kl</p>
+                        <h1 className='content-title'>We Clean Offices!</h1>
+                        <p className='content-info'>Please call us so we can give a you a quote!</p>
                     </div>
-                    <img alt='People are cleaning and smelling' className='slideshow-image' src='https://images.unsplash.com/photo-1616627781545-86e61a33c1dd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80' />
+                    <img alt='People are cleaning and smelling' className='slideshow-image' src={thirdSlide} />
                 </div>
                 <div className='slideshow-image-container'>
                     <div className='content-background'></div>
                     <div className='slideshow-content'>
-                        <h1 className='content-title'>TITLE</h1>
-                        <p className='content-info'>djsakldjska ldjsak ldasj kdlasjd klsdajk ldsaj kl</p>
+                        <h1 className='content-title'>We clean Everything</h1>
+                        <p className='content-info'>If you want us to do your bed or any other custom order. Call us and we will work with you, to leave you satisfied!</p>
                     </div>
-                    <img alt='People are cleaning and smelling' className='slideshow-image' src='https://images.unsplash.com/photo-1611095780122-d692cee29291?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80' />
+                    <img alt='People are cleaning and smelling' className='slideshow-image' src={fourthSlide} />
                 </div>
 
             </div>
