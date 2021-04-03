@@ -13,7 +13,7 @@ export const QuoteForm = () => {
                         <input placeholder='Phone Number' type='text' />
                     </section>
                     <input placeholder='Email' className='quote-form-email' type='email' />
-                    <button className='quote-form-button'>Send Quote</button>
+                    <button className='quote-form-button'>Request Quote</button>
                 </form>
             </section>
         </section>

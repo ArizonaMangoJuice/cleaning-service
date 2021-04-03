@@ -26,6 +26,7 @@ export const Calculator = (props) => {
         dispatch])
 
     return (
+        // this will need to be ref by the calculator components not the whole calculator
         <CalculatorContext.Provider value={{ ...state, dispatch: dispatch }}>
             <section ref={ref} className={`calculator-outer-container ${inView ? 'fade-in' : 'fade-out'}`}>
                 {/* <p>{isVisible && 'yes im now visisble'}</p> */}

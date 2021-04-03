@@ -12,28 +12,28 @@ export default function Packages() {
                 <section className='max-width packages-cards-max-width-container'>
                     <PackagesCard
                         title={'SINGLE VISIT'}
-                        price={'50'}
-                        terms={'Per Visit'}
-                        desc={'Extra charges are based on extra work taken.'}
+                        price={'209'}
+                        terms={'One Time Visit. Extra charges may apply.'}
+                        desc={'Per Visit, if its not first visit $149'}
                     />
                     <PackagesCard
                         isDefault={true}
-                        title={'ON DEMAND'}
-                        price={'125'}
-                        terms={'No. Of Visits'}
-                        desc={'Extra charges are based on extra work taken.'}
+                        title={'Most Popular'}
+                        price={'117'}
+                        terms={'Weekly. Extra charges may apply.'}
+                        desc={'Starting at $117. First cleaning will be $184.'}
                     />
                     <PackagesCard
-                        title={'MAINTENANCE'}
-                        price={'200'}
-                        terms={'Per Month'}
-                        desc={'Extra charges are based on extra work taken.'}
+                        title={'BI WEEKLY'}
+                        price={'121'}
+                        terms={'Bi weekly. Extra charges may apply.'}
+                        desc={'Starting at $121. First cleaning will be $188.'}
                     />
                     <PackagesCard
-                        title={'COMPLETE PACK'}
-                        price={'215'}
-                        terms={'Per Month'}
-                        desc={'Extra charges are based on extra work taken.'}
+                        title={'Monthly'}
+                        price={'134'}
+                        terms={'Monthly. Extra Charges may apply.'}
+                        desc={'Starting at $121. First cleaning will be $201.'}
                     />
                 </section>
             </section>
