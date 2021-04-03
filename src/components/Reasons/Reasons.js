@@ -1,31 +1,35 @@
 import React from 'react';
+import icon11 from '../../images/icon11.svg';
+import icon12 from '../../images/icon12.svg';
+import icon13 from '../../images/icon13.svg';
+import icon14 from '../../images/icon14.svg';
 
 export default function Reason(){
     return (
         <div className='reasons'>
             <div className='reason'>
-                <div className='image-container'>
-                    <img alt='cleaning supplies icon' className='reason-image' src='https://dtweclean.wpengine.com/wp-content/uploads/2016/02/icon11.png' />
+                <div className='image-container reason-red-border'>
+                    <img alt='cleaning supplies icon' className='reason-image' src={icon11} />
                 </div>
-                <p className='reason-text'>Global Locations</p>
+                <p className='reason-text reason-red-text'>Global Locations</p>
             </div>
             <div className='reason reason-blue'>
-                <div className='image-container  reason-blue-border'>
-                    <img alt='cleaning supplies icon' className='reason-image' src='https://dtweclean.wpengine.com/wp-content/uploads/2016/02/icon12.png' />
+                <div className='image-container  reason-red-border'>
+                    <img alt='cleaning supplies icon' className='reason-image' src={icon12} />
                 </div>
-                <p className='reason-text reason-blue-text'>Anytime Support</p>
+                <p className='reason-text reason-red-text'>Anytime Support</p>
             </div>
             <div className='reason'>
                 <div className='image-container reason-red-border'>
-                    <img alt='cleaning supplies icon' className='reason-image' src='https://dtweclean.wpengine.com/wp-content/uploads/2016/02/icon13.png' />
+                    <img alt='cleaning supplies icon' className='reason-image' src={icon13} />
                 </div>
                 <p className='reason-text reason-red-text'>Global Locations</p>
             </div>
             <div className='reason'>
-                <div className='image-container reason-green-border'>
-                    <img alt='cleaning supplies icon' className='reason-image' src='https://dtweclean.wpengine.com/wp-content/uploads/2016/02/icon14.png' />
+                <div className='image-container reason-red-border'>
+                    <img alt='cleaning supplies icon' className='reason-image' src={icon14} />
                 </div>
-                <p className='reason-text reason-green-text'>Global Locations</p>
+                <p className='reason-text reason-red-text'>Global Locations</p>
             </div>
         </div>
     )

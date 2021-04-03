@@ -1,12 +1,14 @@
 import React from 'react';
+import Logo from '../../images/logo.svg';
 
 export const Footer = () => {
     return (
         <footer>
             <div className='logo'>
-                <img src='https://dtweclean.wpengine.com/wp-content/themes/cleaning/images/logo.png' alt='cleaning service' />
+                <img src={Logo} alt='cleaning service' />
             </div>
-            <nav className='footer-nav'>
+            <p>Created By AMJ</p>
+            {/* <nav className='footer-nav'>
                 <div className='footer-links-container'>
                     <a href='www.google.com' className='link-decoration'>Home</a>
                 </div>
@@ -21,7 +23,7 @@ export const Footer = () => {
                 <div className='footer-links-container'>
                     <a href='www.google.com' className='link-decoration'>Content</a>
                 </div>
-            </nav>
+            </nav> */}
         </footer>
     )
 }

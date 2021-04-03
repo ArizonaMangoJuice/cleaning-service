@@ -4,21 +4,29 @@
 
 footer{
     // @extend .header-info;
-    height: 80px;
+    height: 250px;
     position: sticky;
     top: 0px;
     z-index: 99;
     background-color: $linen;
+    @include flex-center;
+    flex-direction: column;
   
     .logo{
       @extend .contacts;
+      height: 50px;
+      margin: 0 35px;
+    }
+
+    img{
+      height: 100%;
     }
   
     .footer-nav{
       @include flex-center;
       grid-column-start: 6;
       grid-column-end: 12;
-  
+      
       a{
         font-size: 15px;
       }

@@ -15,7 +15,6 @@ export function reducer(state, action) {
         case 'increment':
             return { ...state, price: state.price + 1 };
         case 'UPDATE_PRICE':
-            console.log('running Update Price')
             return {
                 ...state,
                 price: 102 +
