@@ -22,7 +22,7 @@ export const Calculator = (props) => {
     return (
         <CalculatorContext.Provider value={{ ...state, dispatch: dispatch }}>
             <section className='calculator-outer-container'>
-                <h1>Estimate How Much Your House     Will Cost To Clean</h1>
+                <h1>Estimate How Much Your House Will Cost To Clean</h1>
                 <CalculatorAdd />
                 <CalculatorFrequency />
                 <CalculatorExtras />
