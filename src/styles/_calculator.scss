@@ -2,6 +2,7 @@
 
 .calculator-outer-container{
     // background-color: $darkLinen;
+    margin-top: 80px;
     padding: 25px;
     margin-bottom: 50px;
     color: $raisinBlack;
@@ -108,7 +109,8 @@
         width: fit-content;
         margin: auto;
         padding: 25px 0px 15px 0;
-        margin-bottom: 25px;
+        margin-bottom: 55px;
+
     
         &::before{
           content: '';
