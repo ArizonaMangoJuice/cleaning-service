@@ -27,14 +27,6 @@ export const CalculatorAdd = (props) => {
                     <option value='6'>6 Bathroom</option>
                 </select>
             </section>
-
-            <section className=''>
-                <button onClick={() => console.log('hello')}>One Time Cleaning</button>
-                <button onClick={() => console.log('hello')}>Every Week</button>
-                <button onClick={() => console.log('hello')}>Every 2 Weeks</button>
-                <button onClick={() => console.log('hello')}>Every 4 Weeks</button>
-            </section>
-
         </div>
     )
 }
