@@ -9,8 +9,18 @@ import Promo from './components/Promo/Promo';
 import QuoteForm from './components/QuoteForm/QuoteForm';
 import Footer from './components/Footer/Footer';
 import Calculator from './components/Calculator/Calculator';
+import { useEffect, useState } from 'react';
+
 
 function App() {
+  const [yPosition, setY] = useState(window.pageYOffset);
+
+  useEffect(() => {
+console.log('this is the window', window.pageYOffset);
+// console.log()
+    setY(window.pageYOffset);   
+  }, [yPosition])
+
   return (
     <div className='app'>
       <HeaderInfo />

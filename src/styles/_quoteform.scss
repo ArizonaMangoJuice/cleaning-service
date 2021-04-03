@@ -4,7 +4,8 @@
 .quote-form-container{
     @include flex-center;
     height: 320px;
-    background-image: url(https://dtweclean.wpengine.com/wp-content/uploads/2016/01/custom-package-bg.jpg);
+    
+    // background-image: url(https://dtweclean.wpengine.com/wp-content/uploads/2016/01/custom-package-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -38,9 +39,16 @@
         font-size: 18px;
         padding: 15px 0;
         margin: 10px 4px;
-        border: none;
+        border: $blueYonderAlpha;
         text-indent: 15px;
-        background-color: $linen;
+        background-color: $darkLinen;
+        transition: .2s;
+        
+        &:focus{
+          transition: .2s;
+          outline-color: $lightCora;
+          box-shadow: 5px 5px 0px 0px $lightCora;
+        }
       }
   
       .quote-form-email{
@@ -48,9 +56,9 @@
       }
   
       .quote-form-button{
-        background-color: $linen;
+        background-color: $darkLinen;
         width: 98.4%;
-        border: 1px solid $lightCora;
+        border: 1px solid $blueYonderAlpha;
         border-radius: 5px;
         font-size: 22px;
         padding: 10px;
@@ -67,6 +75,7 @@
         &:focus{
           background-color: $lightCora;
           color: $linen;
+          outline-color: $lightCora;
         }
       }
   
@@ -77,6 +86,12 @@
   @media screen and (max-width: 768px){
     .quote-form-container{
       height: fit-content;
+
+      form{
+        input{
+          width: 98.4%;
+        }
+      }
 
       .inner-quote-container{
         flex-direction: column;
