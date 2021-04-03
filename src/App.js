@@ -16,8 +16,8 @@ function App() {
   const [yPosition, setY] = useState(window.pageYOffset);
 
   useEffect(() => {
-console.log('this is the window', window.pageYOffset);
-// console.log()
+  console.log('this is the window', window.pageYOffset);
+  // console.log()
     setY(window.pageYOffset);   
   }, [yPosition])
 

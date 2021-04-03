@@ -1,5 +1,17 @@
 @use './variables' as *;
 
+.fade-in{
+  animation: fadeInRight .2s  ease-in-out forwards;
+}
+
+.fade-top{
+  animation: fadeInLeft .2s  ease-in-out forwards;
+}
+
+.fade-in-bottom{
+  animation: fadeInRight .2s  ease-in-out forwards;
+}
+
 @keyframes buttonPress {
     from {
       box-shadow: 5px 5px 0px 0 $lightCora;
@@ -63,5 +75,53 @@
     }
     100%{
       opacity: 1;
+    }
+  }
+
+  @keyframes fadeInLeft {
+    0%{
+      opacity: 0;
+      margin-left: -500px;
+    }
+
+    100%{
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+
+  @keyframes fadeInRight {
+    0%{
+      opacity: 0;
+      margin-right: -500px;
+    }
+
+    100%{
+      opacity: 1;
+      margin-right: 0;
+    }
+  }
+
+  @keyframes fadeInTop {
+    0%{
+      opacity: 0;
+      margin-top: -500px;
+    }
+
+    100%{
+      opacity: 1;
+      margin-top: 0;
+    }
+  }
+
+  @keyframes fadeInDown {
+    0%{
+      opacity: 0;
+      margin-bottom: -500px;
+    }
+
+    100%{
+      opacity: 1;
+      margin-bottom: 0;
     }
   }
