@@ -22,7 +22,7 @@
   
     .content-background{
       border: 500px solid transparent;
-      border-left: 800px solid $blueYonderAlpha;
+      border-left: 800px solid $lightCora;
       border-bottom: 0;
       position: absolute;
       bottom: 5px;
@@ -43,7 +43,8 @@
       padding: 5px 15px;
       overflow: hidden;
       color: $linen;
-      animation: contentMove 7.8s infinite;
+      // needs testing not syncing
+      // animation: contentMove 8s infinite;
     }
   
     .content-info{
