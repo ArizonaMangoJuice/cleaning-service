@@ -6,10 +6,83 @@
     margin-bottom: 50px;
     color: $raisinBlack;
 
+    .calculator-bar-container{
+        width: 80%;
+        margin: auto;
+        position: relative;
+        // border: $border;
+        margin-bottom: 15px;
+        min-height: 60px;
+        height: fit-content;
+    }
+
+    .select-container{
+        height: fit-content;
+        width: fit-content;
+        position: relative;
+
+        &:after{
+            content: '';
+            position: absolute;
+            top: 45%;
+            right: 10%;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: $lightCora;
+        }
+    }
+
+    select{
+        padding: 20px 30px 20px 20px;
+        font-size: 18px;
+        margin: 10px 10px 10px 0;
+        border: 1px solid $blueYonderAlpha;
+        background-color: $darkLinen;
+        position: relative;
+        display: inline-block;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        &::-ms-expand{
+            display: none;
+        }
+
+        &:focus{
+            outline-color: $lightCora;
+        }
+    }
+
+    .calculator-bar{
+        transition: .2s;
+        margin: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        // width: 100%;
+        text-align: center;
+        color: $linen;
+        font-size: 24px;
+        height: 100%;
+        background-color: $lightCora;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        // box-shadow: 4px ​4px 35px 5px black;
+
+        p {
+            margin: 0;
+            padding: 0 15px;
+        }
+
+    }
+
     .calculator-button{
         padding: 20px 20px;
         font-size: 18px;
-        margin: 5px 10px;
+        margin: 10px 10px 10px 0;
         border: none;
         background-color: $darkLinen;
         border: 1px solid $blueYonderAlpha;

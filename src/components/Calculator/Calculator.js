@@ -2,7 +2,7 @@ import React, { useReducer, useEffect } from 'react';
 import CalculatorAdd from './CalculatorAdd';
 import CalculatorExtras from './CalculatorExtras';
 import CalculatorFrequency from './CalculatorFrequency';
-import {initialState, reducer} from './CalculatorReducer';
+import { initialState, reducer } from './CalculatorReducer';
 
 export const CalculatorContext = React.createContext(initialState);
 
@@ -14,18 +14,26 @@ export const Calculator = (props) => {
         dispatch({
             type: 'UPDATE_PRICE'
         })
-    }, [state.size, state.bathrooms, 
-        state.weekly, state.biWeekly, state.oneTime, state.monthly,
-        state.initialClean, state.deepClean,
+    }, [state.size, state.bathrooms,
+    state.weekly, state.biWeekly, state.oneTime, state.monthly,
+    state.initialClean, state.deepClean,
         dispatch])
 
     return (
         <CalculatorContext.Provider value={{ ...state, dispatch: dispatch }}>
             <section className='calculator-outer-container'>
                 <h1>Estimate How Much Your House Will Cost To Clean</h1>
-                <CalculatorAdd />
-                <CalculatorFrequency />
-                <CalculatorExtras />
+                <div className='calculator-bar-container'>
+                    <div className='calculator-bar' style={{ width: `${Math.floor(state.price / 6)}%` }}>
+                        <p className=''>{state.price}</p>
+                    </div>
+                </div>
+                <div className='calculator-bar-container'>
+                    <CalculatorAdd />
+                    <CalculatorFrequency />
+                    <CalculatorExtras />
+                </div>
+
             </section>
         </CalculatorContext.Provider>
     )
