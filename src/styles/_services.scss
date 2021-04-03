@@ -66,6 +66,7 @@
   
     .services-list-image{
       margin-right: 5px;
+      display: none;
     }
   
     .services-image-container{
@@ -94,4 +95,42 @@
       width: 450px;
       // border-radius: 50%;
     }
+  }
+
+  @media screen and (max-width: 769px){
+    .services{
+      flex-direction: column;
+      align-items: center;
+
+    .services-list{
+      margin-left: auto;
+      margin-right: auto;
+      width: fit-content;
+    }
+
+    .title-and-services{
+      text-align: center;
+    }
+
+    .services-image-container{
+      margin-top: 70px;
+    }
+
+    .services-main-image{
+      height: 250px;
+      width: 250px;
+    }
+
+    .services-title{
+      &::after{
+        content: '';
+        background-color: $lightCora;
+        position: absolute;
+        bottom: 0;
+        left: 42.5%;
+        height: 3px;
+        width: 15%;
+      }
+    }
+  }
   }

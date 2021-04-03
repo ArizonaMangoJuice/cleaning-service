@@ -56,3 +56,28 @@
   .reason-green-text{
     color: $slimyGreen;
   }
+
+  @media screen and (max-width: 768px){
+    .reasons{
+      margin-top: 80px;
+      width: 100%;
+      flex-wrap: wrap;
+      
+      .reason{
+        width: 20%;
+        margin-top: 0;
+       margin-bottom: 0;
+      }
+
+      .image-container{
+        height: 100px;
+        width: 100px;
+      }
+
+      .reason-image{
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+      }
+    }
+  }

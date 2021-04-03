@@ -73,3 +73,25 @@
   
     }
   }
+
+  @media screen and (max-width: 768px){
+    .quote-form-container{
+      height: fit-content;
+
+      .inner-quote-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .quote-form-image-section{
+        width: 80%;
+      }
+
+      .quote-form-image-section-img{
+        margin-top: -30px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
