@@ -1,7 +1,10 @@
 import React from 'react';
 import PackagesCard from '../PackagesCard/PackagesCard';
+import { useInView } from 'react-intersection-observer';
 
 export default function Packages() {
+    const {inView, ref} = useInView({})
+
     return (
         <section className='packages'>
             <h2 className='packages-title'>Our Packages</h2>

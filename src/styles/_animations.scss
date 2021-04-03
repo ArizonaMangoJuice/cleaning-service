@@ -1,7 +1,7 @@
 @use './variables' as *;
 
 .fade-in{
-  animation: fadeInRight .2s  ease-in-out forwards;
+  animation: fadeInRight .2s  linear forwards;
 }
 
 .fade-top{
@@ -81,7 +81,7 @@
   @keyframes fadeInLeft {
     0%{
       opacity: 0;
-      margin-left: -500px;
+      left: -500px;
     }
 
     100%{
@@ -93,12 +93,12 @@
   @keyframes fadeInRight {
     0%{
       opacity: 0;
-      margin-right: -500px;
+      transform: translateX(-500px);
     }
 
     100%{
       opacity: 1;
-      margin-right: 0;
+      transform: translateX(0px);
     }
   }
 
@@ -123,5 +123,15 @@
     100%{
       opacity: 1;
       margin-bottom: 0;
+    }
+  }
+
+  @keyframes fadeOut{
+    0%{
+      opacity: 1;
+    }
+
+    100%{
+      opacity: 0;
     }
   }
