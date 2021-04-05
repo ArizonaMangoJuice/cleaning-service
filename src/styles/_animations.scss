@@ -5,11 +5,15 @@
 }
 
 .fade-top{
-  animation: fadeInLeft .2s  ease-in-out forwards;
+  animation: fadeInTop .5s  ease-in-out forwards;
 }
 
 .fade-in-bottom{
   animation: fadeInRight .2s  ease-in-out forwards;
+}
+
+.fade-out{
+  animation: fadeOut .2s ease-in-out forwards;
 }
 
 @keyframes buttonPress {
@@ -78,6 +82,15 @@
     }
   }
 
+  @keyframes fadeOut{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+
   @keyframes fadeInLeft {
     0%{
       opacity: 0;
@@ -105,12 +118,12 @@
   @keyframes fadeInTop {
     0%{
       opacity: 0;
-      margin-top: -500px;
+      transform: scale(0);
     }
 
     100%{
       opacity: 1;
-      margin-top: 0;
+      transform: scale(1);
     }
   }
 

@@ -11,7 +11,7 @@ export const Calculator = (props) => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
     const {ref, inView} = useInView({
-        threshold: 0,
+        threshold: .9,
         delay: 1500
     });
 
@@ -28,15 +28,15 @@ export const Calculator = (props) => {
     return (
         // this will need to be ref by the calculator components not the whole calculator
         <CalculatorContext.Provider value={{ ...state, dispatch: dispatch }}>
-            <section ref={ref} className={`calculator-outer-container ${inView ? 'fade-in' : 'fade-out'}`}>
+            <section className={`calculator-outer-container ${inView ? 'fade-top' : 'fade-out'}`}>
                 {/* <p>{isVisible && 'yes im now visisble'}</p> */}
-                <h1>Estimate How Much Your House Will Cost To Clean</h1>
-                <div className='calculator-bar-container'>
-                    <div className='calculator-bar' style={{ width: `${Math.floor(state.price / 6)}%` }}>
+                <h1 ref={ref}>Estimate How Much Your House Will Cost To Clean</h1>
+                <div ref={ref} className='calculator-bar-container'>
+                    <div ref={ref} className='calculator-bar' style={{ width: `${Math.floor(state.price / 6)}%` }}>
                         <p className=''>${state.price}</p>
                     </div>
                 </div>
-                <div className='calculator-bar-container'>
+                <div ref={ref} className='calculator-bar-container'>
                     <CalculatorAdd />
                     <CalculatorFrequency />
                     <CalculatorExtras />
