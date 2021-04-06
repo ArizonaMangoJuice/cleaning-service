@@ -12,7 +12,8 @@ export const Calculator = (props) => {
 
     const {ref, inView} = useInView({
         threshold: .9,
-        delay: 1500
+        delay: 1500,
+        triggerOnce: true
     });
 
     // this seems wrong, need to check if Im doing an anti pattern

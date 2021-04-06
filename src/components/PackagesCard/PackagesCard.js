@@ -3,7 +3,7 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
 export default function PackagesCard({ title, price, terms, desc, isDefault }) {
-    const { inView, ref } = useInView({ delay: 500,  });
+    const { inView, ref } = useInView({ delay: 500});
     // ref={packageCardRef}
     //  ${isVisible ? 'fade-top' : ''}
     return (
