@@ -4,7 +4,8 @@ export const initialState = {
     firstName: '',
     LastName: '',
     error: true,
-    loading: false
+    loading: false,
+    emailSent: false,
 };
 
 export function reducer (state, action) {
@@ -19,6 +20,8 @@ export function reducer (state, action) {
             return {...state, error: action.payload}
         case 'EDIT_EMAIL': 
             return {...state, email: action.payload}
+        case 'SEND_EMAIL': 
+            return {...state, emailSent: action.payload}
         default: throw new Error();
     }
 }

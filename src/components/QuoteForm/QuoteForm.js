@@ -13,6 +13,18 @@ export const stringErrorValidation = (dispatch, obj) => {
     if(string.length !== 0 || string.length !== 0) return dispatch({type, payload: null});
 }
 
+export const sendEmail = async (dispatch,obj) => {
+    let sentEmail = await fetch('http://localhost:8080/email', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(obj)
+    });
+
+    console.log(sentEmail);
+    
+}
+
 // move validation function to seperate functions
 
 export const QuoteForm = () => {
@@ -80,6 +92,7 @@ export const QuoteForm = () => {
                             if(lastName.length === 0) return;
                             if(email.length === 0) return;
                             if(phoneNumber.length === 0) return;
+                            sendEmail(dispatch, {email, firstName, lastName, phoneNumber})                            
                         }}    
                     >Request Quote</button>
                 </form>
