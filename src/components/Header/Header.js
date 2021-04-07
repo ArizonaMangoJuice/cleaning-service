@@ -8,9 +8,9 @@ export default function Header() {
                 <img className='logo-image' src={Logo} alt='cleaning service' />
             </div>
             <div className='header-nav'>
-                <a href='google.com'>720-555-5555</a>
-                <a href='google.com'>suppor@gmail.com</a>
-                <a href='google.com'>Have Questions?</a>
+                <a href='tel:+7205557555'>720-555-5555</a>
+                <a href='mailto: support@gmail.com'>support@gmail.com</a>
+                <a href='tel:+7205557555'>Have Questions?</a>
             </div>
             {/* this will be used for later  */}
             {/* <nav className='header-nav'>
