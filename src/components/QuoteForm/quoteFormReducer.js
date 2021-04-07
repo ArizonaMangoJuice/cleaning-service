@@ -20,8 +20,12 @@ export function reducer (state, action) {
             return {...state, error: action.payload}
         case 'EDIT_EMAIL': 
             return {...state, email: action.payload}
-        case 'SEND_EMAIL': 
-            return {...state, emailSent: action.payload}
+        case 'EMAIL_SENT': 
+            return {...state, emailSent: true}
+        case 'QUOTE_FORM_LOADING':
+            return {...state, loading: true}
+        case 'QUOTE_FORM_STOP_LOADING': 
+            return {...state, loading: false}
         default: throw new Error();
     }
 }

@@ -14,22 +14,27 @@ export const stringErrorValidation = (dispatch, obj) => {
 }
 
 export const sendEmail = async (dispatch,obj) => {
-    let sentEmail = await fetch('http://localhost:8080/email', {
-        method: 'POST',
-        mode: 'cors',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(obj)
-    });
-
-    console.log(sentEmail);
-    
+    dispatch({type: 'QUOTE_FORM_LOADING'});
+    let sentEmail;
+    try{
+        sentEmail = await fetch('http://localhost:8080/email', {
+            method: 'POST',
+            mode: 'cors',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(obj)
+        });
+        dispatch({type: 'QUOTE_FORM_STOP_LOADING'});
+        dispatch({type: 'EMAIL_SENT'});
+    } catch (error) {
+        console.log(sentEmail);
+    }
 }
 
 // move validation function to seperate functions
 
 export const QuoteForm = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
-    const {email, firstName, lastName, phoneNumber, error} = state;
+    const {email, firstName, lastName, phoneNumber, error, loading, emailSent} = state;
 
     useEffect(() => {
         // console.log(state);
@@ -41,7 +46,11 @@ export const QuoteForm = () => {
                 <section className='quote-form-image-section'>
                     <img alt='woman is smiling and cleaning' className='quote-form-image-section-img' src='https://cdn.pixabay.com/photo/2016/09/01/15/19/industrial-1636397_960_720.jpg' />
                 </section>
-                <form>
+                <section className={`${emailSent ? 'fade-in' : 'hidden'} quote-form-success`}>
+                    <p>Thank You!</p>
+                    <p>We Will Contact You Soon!</p>
+                </section>
+                <form className={`${emailSent ? 'fade-out' : 'email-sent'}`}>
                     <section className='quote-form-error'>
                         <label className='quote-form-error-label'>{error}</label>
                     </section>
@@ -85,7 +94,7 @@ export const QuoteForm = () => {
                         }}
                         value={email} placeholder='Email' className='quote-form-email' type='email' />
                     <button 
-                        disabled={error} className='quote-form-button'
+                        disabled={error || loading ? true : false} className='quote-form-button'
                         onClick={(e) => {
                             e.preventDefault();
                             if(firstName.length === 0) return;
@@ -94,7 +103,7 @@ export const QuoteForm = () => {
                             if(phoneNumber.length === 0) return;
                             sendEmail(dispatch, {email, firstName, lastName, phoneNumber})                            
                         }}    
-                    >Request Quote</button>
+                    >{loading ? 'loading' : 'Request Quote'}</button>
                 </form>
             </section>
         </section>

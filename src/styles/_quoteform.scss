@@ -27,6 +27,28 @@
       box-shadow: -5px 8px 4px 0 $darkLinen;
     }
   
+    .quote-form-success{
+      width: 100%;
+      // height: 100%;
+      margin-left: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: .2s;
+
+      p:last-child{
+        margin-bottom: 156px;
+      }
+    }
+
+    .hidden{
+      opacity: 0;
+      height: 0;
+      width: 0;
+      display: none;
+    }
+
     form{
       @include flex-center;
       flex-direction: column;
