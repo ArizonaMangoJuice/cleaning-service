@@ -3,7 +3,7 @@ export const initialState = {
     phoneNumber: '',
     firstName: '',
     LastName: '',
-    error: null,
+    error: true,
     loading: false
 };
 
@@ -15,6 +15,10 @@ export function reducer (state, action) {
             return {...state, lastName: action.payload}
         case 'EDIT_PHONE_NUMBER':
             return {...state, phoneNumber: action.payload}
+        case 'QUOTE_FORM_ERROR': 
+            return {...state, error: action.payload}
+        case 'EDIT_EMAIL': 
+            return {...state, email: action.payload}
         default: throw new Error();
     }
 }
