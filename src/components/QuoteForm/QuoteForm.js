@@ -6,12 +6,6 @@ import stringErrorValidation from '../../utils/formStringValidation';
 // use Reducer
 export const QuoteCotext = React.createContext(initialState)
 
-
-
-
-
-// move validation function to seperate functions
-
 export const QuoteForm = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
     const {email, firstName, lastName, phoneNumber, error, loading, emailSent} = state;
