@@ -1,34 +1,14 @@
 import React, {useEffect, useReducer} from 'react';
 import { initialState, reducer } from './quoteFormReducer';
+import sendEmail from '../../actions/sendEmail';
+import stringErrorValidation from '../../utils/formStringValidation';
 
 // use Reducer
 export const QuoteCotext = React.createContext(initialState)
 
-export const stringErrorValidation = (dispatch, obj) => {
-    const {string, error, type} = obj;
-    if(string === '') {
-        console.log('its empty')
-        return dispatch({type, payload: error})
-    };
-    if(string.length !== 0 || string.length !== 0) return dispatch({type, payload: null});
-}
 
-export const sendEmail = async (dispatch,obj) => {
-    dispatch({type: 'QUOTE_FORM_LOADING'});
-    let sentEmail;
-    try{
-        sentEmail = await fetch('http://localhost:8080/email', {
-            method: 'POST',
-            mode: 'cors',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(obj)
-        });
-        dispatch({type: 'QUOTE_FORM_STOP_LOADING'});
-        dispatch({type: 'EMAIL_SENT'});
-    } catch (error) {
-        console.log(sentEmail);
-    }
-}
+
+
 
 // move validation function to seperate functions
 
